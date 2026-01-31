@@ -52,9 +52,16 @@ for case in range(int(input())):
     # Anything else is impossible
     else:
         print("no")
-        
-    # wins[X] -> A, wins[O] -> B, grid.count(X)-grid.count(O)==i -> Ci
+
+    # A  = wins[X]
+    # B  = wins[O]
+    # C0 = grid.count(X) - grid.count(O) == 0
+    # C1 = grid.count(X) - grid.count(O) == 1
+    # (original form, then simplified with sympy.simplify_logic)
+
+    # yes = (C0 | C1) & (C0 | ~B) & (C1 | ~A) & (~A | ~B)
+    # valid turn count (0 or 1)
+    # winner must match turn count (2 expressions)
+    # X and O cannot both win
     
-    # yes = (A.¬B.C1)+(¬A.B.C0)+(¬A.¬B.(C0+C1))
-    # Fun fact: We could try to simplify this.
-    # We'll probably find a simpler equation for no.
+    # Well, that was fun.
