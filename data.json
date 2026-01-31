@@ -145,8 +145,8 @@
           "has_files": true
         },
         {
-          "name": "TicTacToe",
-          "path": "kattis/TicTacToe",
+          "name": "TicTacToe2",
+          "path": "kattis/TicTacToe2",
           "type": "dir",
           "has_files": true
         },
@@ -215,5 +215,5 @@
       ]
     }
   ],
-  "generated_at": "2026-01-31T17:06:39.518576"
+  "generated_at": "2026-01-31T17:08:01.514307"
 }
