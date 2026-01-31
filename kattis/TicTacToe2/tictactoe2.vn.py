@@ -31,11 +31,10 @@ for case in range(int(input())):
     wins = {
         "O": False,
         "X": False,
-        ".": None
     }
     
     for i, j, k in lines:
-        if grid[i]==grid[j]==grid[k]:
+        if grid[i]==grid[j]==grid[k] and grid[i] in "X0":
             wins[grid[i]] = True
     
     # X wins
